@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
+    <file url="file://$PROJECT_DIR$/css/images/datePickerIco.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/css/images/publicSprite.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/css/images/sprite.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/cccUI/angular.cccDatePicker.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/other/CCC_DatePicker" charset="UTF-8" />
+  </component>
+</project>

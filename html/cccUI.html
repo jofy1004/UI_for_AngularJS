@@ -1,0 +1,61 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>第六章 综合应用</title>
+
+    <link href="../css/customCss.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/webEsModule.css" rel="stylesheet" type="text/css"/>
+    <link href="../js/other/CCC_DatePicker/skin/WdatePicker.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+<div ng-app="cccUIApp">
+    <div ng-controller="CCCUIController">
+        数字控件：
+        <div ccc-number-input ng-init="VIN='1237489530485'" ng-model="VIN"></div>
+        {{VIN}}
+        <hr/>
+        可点击的字符控件：
+        <div ccc-click-text-input ng-model="custom.name" ccc-dirty="custom.dirty" can-edit="canEdit()">
+            {{custom.name}}/{{custom.dirty}}
+        </div>
+        <hr/>
+        可点击的数字控件：
+        <div ccc-click-number-input ng-model="custom.age" ccc-dirty="custom.dirty" can-edit="canEdit()">
+            {{custom.age}}/{{custom.dirty}}
+        </div>
+        <hr/>
+        可点击的下拉框控件：
+        <!--<div ccc-click-dropdown-input ng-model="custom.type" ccc-dirty="custom.dirty" can-edit="canEdit()">
+            {{custom.type}}/{{custom.dirty}}
+        </div>-->
+        <hr/>
+        日期控件：
+        <div ccc-Date-Picker ng-model="custom.birthday" ccc-max-date="max">
+
+        </div>
+        {{custom.birthday}}
+        <div ccc-Date-Range ccc-start-date="custom.startDate" ccc-end-date="custom.endDate" style="width: 19%">
+
+        </div>
+        {{custom.startDate}}/{{custom.endDate}}
+    </div>
+</div>
+</body>
+</html>
+<script src="../js/other/jquery-1.9.1.js"></script>
+<script src="../js/other/CCC_DatePicker/WdatePicker.js"></script>
+<script src="../js/other/CCC_DatePicker/lang/zh-cn.js"></script>
+<script src="../js/foundation/common.jqueryplugins.js"></script>
+<script src="../js/foundation/common.utils.js"></script>
+<script src="../js/other/angular.js"></script>
+
+<script src="../js/other/kendo.web.2014.2.1008.js"></script>
+<script src="../js/foundation/common.utils.js"></script>
+<script src="../js/app/sixth.js"></script>
+<script src="../js/foundation/cccUI/angular.cccNumberInput.js"></script>
+<script src="../js/foundation/cccUI/angular.cccClickNumberInput.js"></script>
+<script src="../js/foundation/cccUI/angular.cccClickTextInput.js"></script>
+<script src="../js/foundation/cccUI/angular.cccDatePicker.js"></script>
+
+
