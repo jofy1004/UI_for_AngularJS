@@ -10,7 +10,7 @@
     InitTreeViewController.$inject = [ "$scope" ];
 
     function InitTreeViewController($scope) {
-        $scope.contentURLs = [ null, null, "../html/kendoUI.select.html" ];
+        $scope.contentURLs = [ null, null, "/UI_for_AngularJS/html/kendoUI.select.html" ];
 
     }
 })(angular);
