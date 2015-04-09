@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>Kendo UI For Angular</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="../css/kendo.silver.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/kendo.common.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/kendoResect.css" rel="stylesheet" type="text/css"/>
+</head>
+<body ng-app="kendoUITreeViewApp">
+
+<h4>Tree</h4>
+
+<div ng-controller="TreeViewController">
+    <div kendo-tree-view k-data-source="treeViewData" k-options="treeViewOptions"
+         k-on-change="bindTreeChange(dataItem)"></div>
+    {{selectTreeNode}}
+</div>
+
+
+</body>
+</html>
+
+<script src="../js/other/jquery-1.9.1.js"></script>
+<script src="../js/other/angular.js"></script>
+<script src="../js/other/kendo.web.2014.2.1008.js"></script>
+<script src="../js/services/ajaxService.js"></script>
+<script src="../js/app/kendoUI.tree.js"></script>
