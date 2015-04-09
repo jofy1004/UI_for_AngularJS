@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>Grid For Angular</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="../css/kendo.silver.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/kendo.common.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/kendoResect.css" rel="stylesheet" type="text/css"/>
+</head>
+<body ng-app="kendoUIGridApp">
+
+<h4>Grid</h4>
+
+<div ng-controller="GridController">
+    <div kendo-grid k-options="gridOptions" k-on-change="bindGridChange(dataItem)"></div>
+
+    <script type="text/x-kendo-template" id="template">
+        <div>
+            {{selectedGridData}}
+        </div>
+    </script>
+</div>
+
+</body>
+</html>
+
+<script src="../js/other/jquery-1.9.1.js"></script>
+<script src="../js/other/angular.js"></script>
+<script src="../js/other/kendo.web.2014.2.1008.js"></script>
+<script src="../js/services/ajaxService.js"></script>
+<script src="../js/app/kendoUI.grid.js"></script>

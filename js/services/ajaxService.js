@@ -5,13 +5,13 @@
 
     loadData.$inject = [ "$http" ];
 
-    function loadData(http) {
+    function loadData($http) {
 
         /**
          *  http请求
          */
         var httpRequest = function(url) {
-            return http({
+            return $http({
                 method : 'GET',
                 url : url,
                 param : {}
@@ -24,7 +24,7 @@
          * @returns {*}
          */
         var httpGet = function(url) {
-            return http.get(url);
+            return $http.get(url);
         };
 
         /**
@@ -33,7 +33,7 @@
          * @returns {*|HttpPromise}
          */
         var httpPost = function(url) {
-            return http.post(url);
+            return $http.post(url);
         };
 
         return {
