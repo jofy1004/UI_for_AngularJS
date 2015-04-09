@@ -1,10 +1,10 @@
 (function(angular) {
-    var kendoUISelectApp = angular.module("kendoUISelectApp");
+    var kendoUITabStripApp = angular.module("kendoUITabStripApp", [ "kendo.directives" ]);
 
     /**
      * tabStrip
      */
-    kendoUISelectApp.controller("TabStripController", InitTabStripController);
+    kendoUITabStripApp.controller("TabStripController", InitTabStripController);
 
     InitTabStripController.$inject = [ "$scope" ];
 
