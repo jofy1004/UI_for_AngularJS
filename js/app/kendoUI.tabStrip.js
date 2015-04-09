@@ -9,7 +9,7 @@
     InitTabStripController.$inject = [ "$scope" ];
 
     function InitTabStripController($scope) {
-        $scope.contentURLs = [ null, null, "../html/kendoUI.select.html" ];
+        $scope.contentURLs = [ null, null, "../html/tabInclude.html" ];
 
     }
 })(angular);
