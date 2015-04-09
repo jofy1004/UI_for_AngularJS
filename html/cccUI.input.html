@@ -1,0 +1,50 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Input for AngularJS</title>
+    <link href="../css/webEsModule.css" rel="stylesheet" type="text/css"/>
+    <link href="../js/other/CCC_DatePicker/skin/WdatePicker.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+<div ng-app="cccUIInputApp">
+    <div ng-controller="InputController">
+        数字控件：
+        <div ccc-number-input ng-model="custom.age"></div>
+        {{custom.age}}
+        <hr/>
+        可点击的字符控件：
+        <div ccc-click-text-input ng-model="custom.name" ccc-dirty="custom.dirty" can-edit="canEdit()">
+            {{custom.name}}
+        </div>
+        <hr/>
+        可点击的数字控件：
+        <div ccc-click-number-input ng-model="custom.age" ccc-dirty="custom.dirty" can-edit="canEdit()">
+            {{custom.age}}
+        </div>
+        <hr/>
+        日期控件：
+        <div ccc-Date-Picker ng-model="custom.birthday" ccc-max-date="max"></div>
+        <hr/>
+        {{custom}}
+    </div>
+</div>
+</body>
+</html>
+<script src="../js/other/jquery-1.9.1.js"></script>
+<script src="../js/other/CCC_DatePicker/WdatePicker.js"></script>
+<script src="../js/other/CCC_DatePicker/lang/zh-cn.js"></script>
+<script src="../js/foundation/common.jqueryplugins.js"></script>
+<script src="../js/foundation/common.utils.js"></script>
+<script src="../js/other/angular.js"></script>
+
+<script src="../js/other/kendo.web.2014.2.1008.js"></script>
+<script src="../js/foundation/common.utils.js"></script>
+<script src="../js/app/cccUI.input.js"></script>
+<script src="../js/cccUI/angular.cccUI.init.js"></script>
+<script src="../js/cccUI/angular.cccNumberInput.js"></script>
+<script src="../js/cccUI/angular.cccClickNumberInput.js"></script>
+<script src="../js/cccUI/angular.cccClickTextInput.js"></script>
+<script src="../js/cccUI/angular.cccDatePicker.js"></script>
+
+
