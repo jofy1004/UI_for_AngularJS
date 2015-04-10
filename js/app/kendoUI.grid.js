@@ -65,7 +65,7 @@
         $scope.bindGridChange = function(selectedItem) {
             $scope.selectedGridData = selectedItem;
             kendoGrid.collapseRow(".k-master-row");
-            kendoGrid.expandRow($(event.target).closest(".k-master-row"));
+            kendoGrid.expandRow($(event.target).closest("tr"));
         };
 
     }
