@@ -21,9 +21,11 @@
                     <thead>
                     <tr role="row" class="sortTrFlase">
                         <th style="text-align: center;" role="columnheader" class="k-header">&nbsp;</th>
-                        <th style="text-align: center;" role="columnheader" class="k-header"><span title="编号">编号</span></th>
-                        <th style="text-align: center;" role="columnheader" class="k-header"><span title="名字">名字</span></th>
-                        <th style="text-align: center;" role="columnheader" class="k-header">性别</th>
+                        <th style="text-align: center;" role="columnheader" class="k-header"><span title="编号">编号</span>
+                        </th>
+                        <th style="text-align: center;" role="columnheader" class="k-header"><span
+                                title="名字">配件名称</span></th>
+                        <th style="text-align: center;" role="columnheader" class="k-header">配件价格</th>
                     </tr>
                     </thead>
                 </table>
@@ -37,24 +39,40 @@
                     <col style="width:30%">
                     <col style="width:30%">
                 </colgroup>
-                <tr class="k-master-row" ng-repeat="item in gridData">
+                <tbody ng-repeat="category in gridData">
+                <tr class="k-grouping-row">
+                    <td colspan="30" aria-expanded="true">
+                        <p class="k-reset" ng-click="category.showCategory=!category.showCategory;">
+                            <a class="k-icon"
+                               ng-class="{'k-i-collapse':category.showCategory,'k-i-expand':!category.showCategory}"
+                               href="#" tabindex="-1"></a>
+                            {{category.categoryName}}
+                        </p>
+                    </td>
+                </tr>
+                <tr class="k-master-row" ng-repeat="item in category.items" ng-show="category.showCategory">
                     <td style="text-align: center;">
                         <input type="checkbox"/>
                     </td>
                     <td style="text-align: center;">
-                        <div ccc-click-text-input ng-model="item.id" ccc-dirty="custom.dirty" can-edit="canEdit()">
-                            {{item.id}}
+                        <div ccc-click-text-input ng-model="item.itemId">
+                            {{item.itemId}}
                         </div>
                     </td>
                     <td style="text-align: center;">
-                        <div ccc-click-text-input ng-model="item.name" ccc-dirty="custom.dirty" can-edit="canEdit()">
-                            {{item.name}}
+                        <div ccc-click-text-input ng-model="item.itemName" ccc-dirty="item.dirty"
+                             can-edit="canEdit()">
+                            {{item.itemName}}
                         </div>
                     </td>
                     <td style="text-align: center;">
-                        {{item.type}}
+                        <div ccc-click-text-input ng-model="item.itemPrice" ccc-dirty="item.dirty"
+                             can-edit="canEdit()">
+                            {{item.itemPrice}}
+                        </div>
                     </td>
                 </tr>
+                </tbody>
             </table>
         </div>
     </div>

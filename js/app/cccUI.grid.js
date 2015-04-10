@@ -10,7 +10,7 @@
     InitGridAppController.$inject = [ "$scope", "ajaxService" ];
 
     function InitGridAppController($scope, http) {
-        var url = "http://jofy1004.github.io/blog/data/grid.json";
+        var url = "http://jofy1004.github.io/UI_for_AngularJS/data/gridData.json";
         http.httpGet(url).success(function(data) {
             $scope.gridData = data;
         });
