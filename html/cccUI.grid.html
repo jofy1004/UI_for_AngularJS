@@ -1,0 +1,76 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Grid for AngularJS</title>
+    <link href="../css/webEsModule.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/kendo.silver.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/kendo.common.min.css" rel="stylesheet" type="text/css"/>
+</head>
+<body ng-app="cccUIGridApp" ng-controller="GridAppController">
+<div>
+    <div class="k-grid k-widget" style="zoom: 1;" ng-show="itemGridViewType!='03'">
+        <div class="k-grid-header" style="padding-right: 17px;">
+            <div class="k-grid-header-wrap">
+                <table>
+                    <colgroup>
+                        <col style="width:10%">
+                        <col style="width:30%">
+                        <col style="width:30%">
+                        <col style="width:30%">
+                    </colgroup>
+                    <thead>
+                    <tr role="row" class="sortTrFlase">
+                        <th style="text-align: center;" role="columnheader" class="k-header">&nbsp;</th>
+                        <th style="text-align: center;" role="columnheader" class="k-header"><span title="编号">编号</span></th>
+                        <th style="text-align: center;" role="columnheader" class="k-header"><span title="名字">名字</span></th>
+                        <th style="text-align: center;" role="columnheader" class="k-header">性别</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+        <div class="k-grid-content" style="height:300px;">
+            <table style="height: auto;width:100%">
+                <colgroup>
+                    <col style="width:10%">
+                    <col style="width:30%">
+                    <col style="width:30%">
+                    <col style="width:30%">
+                </colgroup>
+                <tr class="k-master-row" ng-repeat="item in gridData">
+                    <td style="text-align: center;">
+                        <input type="checkbox"/>
+                    </td>
+                    <td style="text-align: center;">
+                        <div ccc-click-text-input ng-model="item.id" ccc-dirty="custom.dirty" can-edit="canEdit()">
+                            {{item.id}}
+                        </div>
+                    </td>
+                    <td style="text-align: center;">
+                        <div ccc-click-text-input ng-model="item.name" ccc-dirty="custom.dirty" can-edit="canEdit()">
+                            {{item.name}}
+                        </div>
+                    </td>
+                    <td style="text-align: center;">
+                        {{item.type}}
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<hr/>
+{{gridData}}
+</body>
+</html>
+<script src="../js/other/jquery-1.9.1.js"></script>
+<script src="../js/other/angular.js"></script>
+
+<script src="../js/app/cccUI.grid.js"></script>
+<script src="../js/cccUI/angular.cccUI.init.js"></script>
+<script src="../js/cccUI/angular.cccNumberInput.js"></script>
+<script src="../js/cccUI/angular.cccClickNumberInput.js"></script>
+<script src="../js/cccUI/angular.cccClickTextInput.js"></script>
+<script src="../js/services/ajaxService.js"></script>
+
+
