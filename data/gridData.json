@@ -1,0 +1,40 @@
+[
+  {
+    "categoryId": 1,
+    "categoryName":"发动机",
+    "items":[
+      {
+        "itemId" : "11",
+        "itemName" : "螺丝钉",
+        "itemPrice":"12.00"
+      },
+      {
+        "itemId" : "12",
+        "itemName" : "气缸",
+        "itemPrice":"20000"
+      }
+    ]
+  },
+  {
+    "categoryId": 2,
+    "categoryName":"车前部位",
+    "items":[
+      {
+        "itemId" : "21",
+        "itemName" : "车盖",
+        "itemPrice":"1000.00"
+      }
+    ]
+  },
+  {
+    "categoryId": 3,
+    "categoryName":"其他",
+    "items":[
+      {
+        "itemId" : "31",
+        "itemName" : "机油",
+        "itemPrice":"400.00"
+      }
+    ]
+  }
+]
